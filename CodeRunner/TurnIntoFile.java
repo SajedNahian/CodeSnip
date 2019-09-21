@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class TurnIntoFile {
-    public static void writeFile(String input)
+    public void writeFile(String input)
     {
         try {
             File file = new File("inputFile.java");

@@ -1,8 +1,29 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class RunFile {
     public static void main(String[] args){
+        TurnIntoFile tf = new TurnIntoFile();
 
+        String strRun = "";
+        int i = 1;
+        while(i < args.length){
+            strRun += args[i];
+            i++;
+        }
 
-        String run = "javac inputFile.java";
+        try {
+            File file = new File("inputFile.java");
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(strRun);
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String run = "java inputFile.java";
         try
         {
             Runtime.getRuntime().exec(run);
