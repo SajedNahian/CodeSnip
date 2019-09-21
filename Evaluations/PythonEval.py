@@ -1,2 +1,3 @@
 def evaluation(str):
-    eval(str)
+    x = eval(str)
+    print(x)
