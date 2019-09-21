@@ -9,9 +9,10 @@ public class RunFile {
         String strRun = "";
         int i = 1;
         while(i < args.length){
-            strRun += args[i];
+            strRun += args[i] + " ";
             i++;
         }
+        tf.writeFile(strRun);
 
         try {
             File file = new File("inputFile.java");
