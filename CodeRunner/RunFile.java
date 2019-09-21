@@ -14,16 +14,6 @@ public class RunFile {
         }
         tf.writeFile(strRun);
 
-        try {
-            File file = new File("inputFile.java");
-            FileWriter fileWriter = new FileWriter(file);
-            fileWriter.write(strRun);
-            fileWriter.flush();
-            fileWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         String run = "java inputFile.java";
         try
         {
